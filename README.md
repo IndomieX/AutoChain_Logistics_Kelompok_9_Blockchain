@@ -42,6 +42,7 @@ Buat fail baru dengan nama AutoChainLogistics.sol dan salin kode smart contract 
 Jalankan kompilasi pada tab Solidity Compiler (gunakan versi 0.8.0 atau lebih tinggi).  
 
 Navigasikan ke tab Deploy & Run Transactions. Atur Environment ke Injected Provider - MetaMask dan pastikan dompet terhubung ke jaringan Sepolia.  
-👥 Tim PengembangNamaPeranTanggung Jawab UtamaRafi Daniswara Putra WidiatnokoProject Manager & Smart Contract DevAnalisis teknis, koding Solidity, & manajemen repositori GitHub.Adham Resi GhiffariSystem Analyst & Technical WriterAnalisis masalah, justifikasi teknologi, & penyusunan laporan Bab 1 & 3.Fathur Muttaqi RahmanUI/UX & Frontend PlannerPerancangan wireframe antarmuka & diagram alur data teknis.Maisha LafinaResearcher & Academic WriterStudi literatur, penyusunan abstrak, & dokumentasi daftar pustaka.
+
+
 
 Lakukan simulasi dengan mendaftarkan VIN melalui fungsi registerVehicle sebelum mengeksekusi pembaruan status melalui updateShipment.
