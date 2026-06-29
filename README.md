@@ -1,62 +1,38 @@
-# AutoChain Logistics: Implementasi Blockchain untuk Transparansi Industri Logistik Mobil
+# 🔗 AutoChain Logistics Tracking System (Kelompok 9)
 
-Repositori ini memuat prototipe *Decentralized Application* (dApp) untuk memfasilitasi pelacakan distribusi unit kendaraan yang transparan, aman, dan kebal terhadap manipulasi data (*tamper-proof*). Proyek ini dirancang sebagai pemenuhan Ujian Tengah Semester (UTS) dalam perancangan sistem informasi akademik di lingkungan **Institut Teknologi PLN (ITPLN)**.
-
-Sistem ini mentransisikan proses pemantauan logistik dari arsitektur basis data terpusat menuju *smart contract* di jaringan Ethereum, guna mengeliminasi *single point of failure* dan menjamin integritas riwayat status kendaraan dari pabrik hingga ke dealer[cite: 3].
+An untamperable decentralized application (dApp) built to track vehicle supply chain lifecycles across distributed participants. This system integrates **Solidity Smart Contracts** deployed on the **Ethereum Sepolia Testnet** with a dynamic, multi-page frontend interface powered by **Ethers.js** and **SweetAlert2**.
 
 ---
 
-## 📌 Deskripsi Arsitektur Sistem
-
-**AutoChain Logistics** mengimplementasikan pendekatan arsitektur hibrida untuk menjaga efisiensi komputasi jaringan (*gas fee*) dan melindungi privasi data operasional internal[cite: 3].
-
-Logika inti (*core logic*) pelacakan unit diimplementasikan di dalam `AutoChainLogistics.sol`, yang secara spesifik mencatat[cite: 3]:
-
-1.  **Registrasi Unit (VIN):** Pendaftaran Nomor Rangka (VIN) sebagai identitas unik digital yang resmi lahir di dalam *blockchain*[cite: 3].
-2.  **Kekebalan Riwayat:** Pencatatan setiap perubahan status distribusi (seperti "Transit" atau "Diterima Dealer") secara permanen dan *immutable*[cite: 3].
-3.  **Verifikasi Akses:** Mekanisme validasi berbasis *mapping* untuk memastikan hanya vendor logistik terverifikasi yang dapat memperbarui status perjalanan unit[cite: 3].
+## 👥 Anggota Kelompok & Kontributor
+* **Program Studi:** Sistem Informasi
+* **Mata Kuliah:** Teknologi Blockchain
+* **Repositori Resmi:** [GitHub Link](https://github.com/INDOMIEX/AUTOCHAIN_LOGISTICS_KELOMPOK_9_BLOCKCHAIN.git)
 
 ---
 
-## ✨ Fitur Utama (Berdasarkan Smart Contract)
+## 🛠️ Tech Stack & Arsitektur Sistem
 
-*   **Role-Based Access Control:** Penggunaan *modifier* `hanyaPabrik` memastikan bahwa otorisasi pendaftaran unit baru hanya dapat dilakukan oleh entitas Manufaktur (Pabrik) yang sah[cite: 3].
-*   **Immutable Audit Trail:** Setiap transaksi pemindahan unit meninggalkan jejak digital permanen yang mempermudah pelacakan jika terjadi anomali atau sengketa di lapangan[cite: 3].
-*   **Event Logging:** Pencatatan jejak audit secara *real-time* ke dalam buku besar publik setiap kali terjadi registrasi kendaraan atau pembaruan status pengiriman[cite: 3].
+Aplikasi ini menggunakan pendekatan **Hybrid Architecture** demi mengoptimalkan efisiensi biaya gas (*gas fee utilization*):
+1. **On-Chain Data (Solidity Smart Contract):** Menyimpan data esensial yang membutuhkan integritas tinggi dan transparansi mutlak, seperti nomor VIN (Primary Key), status logistik dinamis, alamat wallet pengubah, dan waktu *block timestamp*.
+2. **Off-Chain Data (Local Database JSON):** Menyimpan spesifikasi fisik kendaraan yang statis dan berat (Nama Mobil, Tahun Produksi, Varian Warna) pada berkas terpisah untuk dibaca secara asinkron oleh frontend berdasarkan kecocokan VIN.
 
----
-
-## 🛠️ Tumpukan Teknologi (Tech Stack)
-
-*   **Smart Contract:** Solidity (^0.8.0)[cite: 3]
-*   **Jaringan Target:** Ethereum Sepolia (Testnet)[cite: 3]
-*   **Lingkungan Pengembangan (IDE):** Remix Ethereum[cite: 3]
-*   **Otentikasi Identitas (Web3):** MetaMask[cite: 3]
-*   **Arsitektur Antarmuka:** Flutter / HTML-JS (Fase Implementasi Lanjutan UAS)[cite: 3]
+* **Smart Contract Language:** Solidity v0.8.x
+* **Blockchain Network:** Ethereum Sepolia Testnet
+* **Web3 Provider:** MetaMask Extension Wallet
+* **Frontend Controller:** Vanilla JavaScript, HTML5, CSS3 Grid System
+* **Libraries:** Ethers.js v5 (Web3 RPC Liaison), SweetAlert2 (Dynamic Centered Modal Alerts)
 
 ---
 
-## 🚀 Panduan Pengujian (Simulasi Remix IDE)
+## 📂 Struktur Repositori Proyek
 
-Untuk menguji integritas dan fungsionalitas logika *smart contract*, ikuti langkah prosedural berikut[cite: 3]:
-
-1.  Buka [Remix IDE](https://remix.ethereum.org/).
-2.  Buat fail baru dengan nama `AutoChainLogistics.sol` dan salin kode *smart contract* dari repositori ini[cite: 3].
-3.  Jalankan kompilasi pada tab **Solidity Compiler** (gunakan versi 0.8.0 atau lebih tinggi)[cite: 3].
-4.  Navigasikan ke tab **Deploy & Run Transactions**. Atur *Environment* ke *Injected Provider - MetaMask* dan pastikan dompet terhubung ke jaringan **Sepolia**[cite: 3].
-5.  Klik **Deploy**. Alamat yang melakukan *deploy* akan otomatis ditetapkan sebagai `managerPabrik`[cite: 3].
-6.  Lakukan simulasi dengan mendaftarkan VIN melalui fungsi `registerVehicle` sebelum mengeksekusi pembaruan status melalui `updateShipment`[cite: 3].
-
----
-
-## 👥 Tim Pengembang
-
-| Nama | Peran | Tanggung Jawab Utama |
-| :--- | :--- | :--- |
-| **Rafi Daniswara Putra Widiatnoko** | Project Manager & Smart Contract Dev | Analisis teknis, koding Solidity, & manajemen repositori GitHub[cite: 3]. |
-| **Adham Resi Ghiffari** | System Analyst & Technical Writer | Analisis masalah, justifikasi teknologi, & penyusunan laporan Bab 1 & 3[cite: 3]. |
-| **Fathur Muttaqi Rahman** | UI/UX & Frontend Planner | Perancangan *wireframe* antarmuka & diagram alur data teknis[cite: 3]. |
-| **Maisha Lafina** | Researcher & Academic Writer | Studi literatur, penyusunan abstrak, & dokumentasi daftar pustaka[cite: 3]. |
-
----
-© 2026 AutoChain Logistics Team - ITPLN[cite: 3]
+```text
+autochain-web/
+├── index.html       # Halaman Utama: Track Verification & Dashboard Audit Trail
+├── register.html    # Panel Pabrik: Minting & Inisialisasi Kendaraan Baru
+├── update.html      # Panel Vendor Logistik: Pembaruan Manifes Distribusi Rute
+├── confirm.html     # Panel Dealer: Validasi Penerimaan Akhir & Penutupan Siklus Ledger
+├── shared.js        # Core Web3 Network Initialization & Automated Wallet Recovery
+├── style.css        # Desain Dashboard Layout, Sidebar Navigasi & Responsive Grid
+└── vehicles.json    # Off-Chain Metadata Store (Spesifikasi Fisik Aset)
