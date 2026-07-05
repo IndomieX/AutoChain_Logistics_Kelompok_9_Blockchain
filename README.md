@@ -160,4 +160,5 @@ Daftar perangkat lunak dan komponen environment awal yang harus Anda persiapkan:
 ### Installation
 
 1. Kloning repositori kode sumber AutoChain Logistics
-2. git clone https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain.git
+   ```sh
+   git clone https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain.git
