@@ -65,6 +65,85 @@ Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja we
 * [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 * [![Ethers.js](https://img.shields.io/badge/Ethers.js-2535a0?style=for-the-badge&logo=ethereum&logoColor=white)](https://docs.ethers.org/v5/)
 
+<!-- FUNGSI UTAMA -->
+## Fungsi Utama
+
+### 1. Track & Overview Dashboard (`/`)
+* **Tampilan Ringkas Metrik:** Menyajikan ringkasan data total pasokan unit secara real-time yang terbagi menjadi tiga indikator statistik (*Total Unit*, *Dalam Transit*, dan *Sampai Dealer*).
+* **Cryptographic Lifecycle Log:** Menyediakan kolom pencarian string tunggal Nomor Rangka (VIN) untuk menarik jejak digital audit (*digital footprint*) perjalanan unit secara kronologis.
+
+<p align="center">
+  <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Dashboard Overview Screenshot" width="700">
+</p>
+
+### 2. Vehicle Registration (`/register`)
+* **Otoritas Khusus Pabrik:** Formulir entri data terisolasi yang dilindungi oleh modifier keamanan `hanyaPabrik` untuk mendaftarkan unit mobil baru.
+* **Inisialisasi Hybrid Storage:** Mengirimkan parameter kode identifikasi VIN menuju blok Sepolia Testnet dan secara simultan mencatat data fisik statis (Model, Tahun, Warna) ke memori lokal[cite: 1].
+
+<p align="center">
+  <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Vehicle Registration Screenshot" width="700">
+</p>
+
+### 3. Logistics Shipment Update (`/update`)
+* **Pembaruan Posisi Manifes:** Halaman khusus kurir ekspedisi untuk memperbarui manifes teks log posisi koordinat atau terminal transit terkini unit[cite: 1].
+* **Proteksi Akses RBAC:** Memanfaatkan gerbang pengujian whitelist `hanyaVendorTerverifikasi` untuk menolak dan melakukan *revert transaction* secara keras apabila dipicu oleh akun ilegal[cite: 1].
+
+<p align="center">
+  <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Logistics Update Screenshot" width="700">
+</p>
+
+### 4. Arrival Confirmation (`/confirm`)
+* **Terminal Akhir Distribusi:** Panel interaktif serah terima digital bagi pihak Dealer Resmi untuk memeriksa muatan unit inbound[cite: 1].
+* **Parsing Data Hibrida:** Menampilkan kartu ringkasan spesifikasi kendaraan hasil gabungan query *on-chain data* dan berkas database lokal secara asinkron sebelum mengunci transaksi final[cite: 1].
+
+<p align="center">
+  <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Arrival Confirmation Screenshot" width="700">
+</p>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- TEKNOLOGI & TOOLS -->
+## Teknologi & Tools
+
+* **Next.js 14 (App Router)**
+  * Framework React modern untuk optimalisasi performa *routing client-side* berbasis multi-halaman (*multi-page dApp*)[cite: 1].
+  * Struktur direktori `/src/app` digunakan secara modular untuk memisahkan logika antarmuka tiap peran aktor[cite: 1].
+* **Solidity 0.8.0**
+  * Bahasa pemrograman berorientasi objek untuk menyusun kompilasi logika bisnis, aturan modifikasi hak akses, dan struktur objek *Smart Contract*[cite: 1].
+* **Ethers.js v5**
+  * Pustaka Web3 eksternal yang bertindak sebagai *provider* dan *signer* asinkron untuk menghubungkan API fungsi kontrak pintar dengan antarmuka Next.js[cite: 1].
+* **Tailwind CSS**
+  * *Utility-first CSS framework* untuk membangun tema tata letak seragam *Futuristic Glassmorphism Dashboard* yang konsisten[cite: 1].
+* **SweetAlert2**
+  * Komponen modal pop-up notifikasi interaktif untuk menangkap respon pemuatan status transaksi atau pesan kegagalan penandatanganan gas fee[cite: 1].
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- STRUKTUR PROYEK -->
+## Struktur Proyek
+
+* `src/app/layout.js` - Layout utama dasbor aplikasi termasuk komponen bilah navigasi kiri (*sidebar*).
+* `src/app/page.js` - Halaman utama penelusuran status publik dilengkapi linimasa *Cryptographic Lifecycle Log*[cite: 1].
+* `src/app/register/page.js` - Panel pendaftaran unit kendaraan baru bermetode penulisan *on-chain* (Pabrik)[cite: 1].
+* `src/app/update/page.js` - Panel penyiaran log lokasi atau manifes perjalanan unit distribusi (Vendor Logistik)[cite: 1].
+* `src/app/confirm/page.js` - Panel validasi inbound dokumen dan penguncian status terima terminal akhir (Dealer)[cite: 1].
+* `src/app/context/Web3Context.js` - Global state management reaktif untuk memulihkan sesi dan mendengarkan akun MetaMask wallet[cite: 1].
+* `public/vehicles.json` - Basis data statis penyimpanan data sekunder spesifikasi fisik komponen kendaraan (*Off-Chain Storage*)[cite: 1].
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- CARA MENJALANKAN -->
+## Cara Menjalankan
+
+1. **Install dependensi:**
+   ```sh
+   npm install
 <!-- GETTING STARTED -->
 ## Getting Started
 
