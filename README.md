@@ -73,7 +73,7 @@ Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja we
 * **Cryptographic Lifecycle Log:** Menyediakan kolom pencarian string tunggal Nomor Rangka (VIN) untuk menarik jejak digital audit (*digital footprint*) perjalanan unit secara kronologis.
 
 <p align="center">
-  <img width="1197" height="670" alt="image" src="https://github.com/user-attachments/assets/47fb8ec3-41a1-4b90-ae6b-7166605bd8c9" />
+  <img width="1247" height="654" alt="image" src="https://github.com/user-attachments/assets/70794ff9-45c4-48a2-b291-12f5b170cbe9" />
 </p>
 
 ### 2. Vehicle Registration (`/register`)
@@ -81,7 +81,7 @@ Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja we
 * **Inisialisasi Hybrid Storage:** Mengirimkan parameter kode identifikasi VIN menuju blok Sepolia Testnet dan secara simultan mencatat data fisik statis (Model, Tahun, Warna) ke memori lokal[cite: 1].
 
 <p align="center">
-  <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Vehicle Registration Screenshot" width="700">
+  <img width="1235" height="793" alt="image" src="https://github.com/user-attachments/assets/53ca5e31-6451-4ecf-a1fa-b9db2947b53b" />
 </p>
 
 ### 3. Logistics Shipment Update (`/update`)
@@ -89,7 +89,7 @@ Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja we
 * **Proteksi Akses RBAC:** Memanfaatkan gerbang pengujian whitelist `hanyaVendorTerverifikasi` untuk menolak dan melakukan *revert transaction* secara keras apabila dipicu oleh akun ilegal[cite: 1].
 
 <p align="center">
-  <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Logistics Update Screenshot" width="700">
+  <img width="1265" height="600" alt="image" src="https://github.com/user-attachments/assets/6fbe1dc0-f8dd-4d7d-abab-24b59f0655f8" />
 </p>
 
 ### 4. Arrival Confirmation (`/confirm`)
@@ -97,7 +97,7 @@ Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja we
 * **Parsing Data Hibrida:** Menampilkan kartu ringkasan spesifikasi kendaraan hasil gabungan query *on-chain data* dan berkas database lokal secara asinkron sebelum mengunci transaksi final[cite: 1].
 
 <p align="center">
-  <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Arrival Confirmation Screenshot" width="700">
+  <img width="1231" height="459" alt="image" src="https://github.com/user-attachments/assets/3fcd6019-4115-4352-a023-53820ca81f28" />
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
