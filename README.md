@@ -137,13 +137,6 @@ Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja we
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
-
-<!-- CARA MENJALANKAN -->
-## Cara Menjalankan
-
-1. **Install dependensi:**
-   ```sh
-   npm install
 <!-- GETTING STARTED -->
 ## Getting Started
 
