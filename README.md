@@ -1,9 +1,3 @@
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain">
-    <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">AutoChain Logistics</h3>
 
