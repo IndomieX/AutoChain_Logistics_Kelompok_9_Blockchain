@@ -61,13 +61,11 @@ Berikut adalah keunggulan utama arsitektur kami:
 
 Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja web premium berikut:
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Solidity][Solidity.js]][Solidity-url]
-* [![Tailwind][Tailwind.com]][Tailwind-url]
-* [![Ethers][Ethers.js]][Ethers-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* [![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+* [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+* [![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)](https://soliditylang.org/)
+* [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+* [![Ethers.js](https://img.shields.io/badge/Ethers.js-2535a0?style=for-the-badge&logo=ethereum&logoColor=white)](https://docs.ethers.org/v5/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
