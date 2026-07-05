@@ -44,8 +44,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![AutoChain Logistics Screen Shot][product-screenshot]](https://auto-chain-logistics-kelompok-9-blo.vercel.app)
-
 Industri logistik otomotif konvensional masih menghadapi tantangan besar terkait transparansi data dan risiko manipulasi riwayat unit kendaraan selama proses distribusi dari pabrik ke dealer. Basis data tradisional yang bersifat terpusat memiliki kerentanan berupa titik kegagalan tunggal (*single point of failure*), di mana pihak internal dapat mengubah data log perjalanan tanpa rekam jejak yang transparan (*siloed data*).
 
 **AutoChain Logistics** hadir sebagai platform *Single Source of Truth* terdesentralisasi yang menjamin integritas data mutlak. Proyek ini mengimplementasikan aplikasi terdesentralisasi (dApp) berbasis arsitektur multi-halaman yang memanfaatkan *smart contract* Solidity pada jaringan Ethereum Sepolia Testnet. Dengan menggunakan Nomor Rangka (*Vehicle Identification Number*/VIN) sebagai kunci utama permanen (*immutable primary key*) di dalam blockchain, manipulasi riwayat perjalanan oleh pihak ketiga dapat dicegah secara total.
