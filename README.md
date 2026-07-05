@@ -73,7 +73,7 @@ Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja we
 * **Cryptographic Lifecycle Log:** Menyediakan kolom pencarian string tunggal Nomor Rangka (VIN) untuk menarik jejak digital audit (*digital footprint*) perjalanan unit secara kronologis.
 
 <p align="center">
-  <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Dashboard Overview Screenshot" width="700">
+  <img width="1197" height="670" alt="image" src="https://github.com/user-attachments/assets/47fb8ec3-41a1-4b90-ae6b-7166605bd8c9" />
 </p>
 
 ### 2. Vehicle Registration (`/register`)
