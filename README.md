@@ -1,38 +1,112 @@
-# 🔗 AutoChain Logistics Tracking System (Kelompok 9)
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a id="readme-top"></a>
 
-An untamperable decentralized application (dApp) built to track vehicle supply chain lifecycles across distributed participants. This system integrates **Solidity Smart Contracts** deployed on the **Ethereum Sepolia Testnet** with a dynamic, multi-page frontend interface powered by **Ethers.js** and **SweetAlert2**.
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc.
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Vercel Deployment][vercel-shield]][vercel-url]
 
----
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain">
+    <img src="https://auto-chain-logistics-kelompok-9-blo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.png&w=256&q=75" alt="Logo" width="80" height="80">
+  </a>
 
-## 👥 Anggota Kelompok & Kontributor
-* **Program Studi:** Sistem Informasi
-* **Mata Kuliah:** Teknologi Blockchain
-* **Repositori Resmi:** [GitHub Link](https://github.com/INDOMIEX/AUTOCHAIN_LOGISTICS_KELOMPOK_9_BLOCKCHAIN.git)
+  <h3 align="center">AutoChain Logistics</h3>
 
----
+  <p align="center">
+    Implementasi Blockchain untuk Meningkatkan Transparansi pada Industri Logistik Mobil
+    <br />
+    <a href="https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://auto-chain-logistics-kelompok-9-blo.vercel.app">View Demo</a>
+    &middot;
+    <a href="https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain/issues/new?labels=bug">Report Bug</a>
+    &middot;
+    <a href="https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain/issues/new?labels=enhancement">Request Feature</a>
+  </p>
+</div>
 
-## 🛠️ Tech Stack & Arsitektur Sistem
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-Aplikasi ini menggunakan pendekatan **Hybrid Architecture** demi mengoptimalkan efisiensi biaya gas (*gas fee utilization*):
-1. **On-Chain Data (Solidity Smart Contract):** Menyimpan data esensial yang membutuhkan integritas tinggi dan transparansi mutlak, seperti nomor VIN (Primary Key), status logistik dinamis, alamat wallet pengubah, dan waktu *block timestamp*.
-2. **Off-Chain Data (Local Database JSON):** Menyimpan spesifikasi fisik kendaraan yang statis dan berat (Nama Mobil, Tahun Produksi, Varian Warna) pada berkas terpisah untuk dibaca secara asinkron oleh frontend berdasarkan kecocokan VIN.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-* **Smart Contract Language:** Solidity v0.8.x
-* **Blockchain Network:** Ethereum Sepolia Testnet
-* **Web3 Provider:** MetaMask Extension Wallet
-* **Frontend Controller:** Vanilla JavaScript, HTML5, CSS3 Grid System
-* **Libraries:** Ethers.js v5 (Web3 RPC Liaison), SweetAlert2 (Dynamic Centered Modal Alerts)
+[![AutoChain Logistics Screen Shot][product-screenshot]](https://auto-chain-logistics-kelompok-9-blo.vercel.app)
 
----
+Industri logistik otomotif konvensional masih menghadapi tantangan besar terkait transparansi data dan risiko manipulasi riwayat unit kendaraan selama proses distribusi dari pabrik ke dealer. Basis data tradisional yang bersifat terpusat memiliki kerentanan berupa titik kegagalan tunggal (*single point of failure*), di mana pihak internal dapat mengubah data log perjalanan tanpa rekam jejak yang transparan (*siloed data*).
 
-## 📂 Struktur Repositori Proyek
+**AutoChain Logistics** hadir sebagai platform *Single Source of Truth* terdesentralisasi yang menjamin integritas data mutlak. Proyek ini mengimplementasikan aplikasi terdesentralisasi (dApp) berbasis arsitektur multi-halaman yang memanfaatkan *smart contract* Solidity pada jaringan Ethereum Sepolia Testnet. Dengan menggunakan Nomor Rangka (*Vehicle Identification Number*/VIN) sebagai kunci utama permanen (*immutable primary key*) di dalam blockchain, manipulasi riwayat perjalanan oleh pihak ketiga dapat dicegah secara total.
 
-```text
-autochain-web/
-├── index.html       # Halaman Utama: Track Verification & Dashboard Audit Trail
-├── register.html    # Panel Pabrik: Minting & Inisialisasi Kendaraan Baru
-├── update.html      # Panel Vendor Logistik: Pembaruan Manifes Distribusi Rute
-├── confirm.html     # Panel Dealer: Validasi Penerimaan Akhir & Penutupan Siklus Ledger
-├── shared.js        # Core Web3 Network Initialization & Automated Wallet Recovery
-├── style.css        # Desain Dashboard Layout, Sidebar Navigasi & Responsive Grid
-└── vehicles.json    # Off-Chain Metadata Store (Spesifikasi Fisik Aset)
+Berikut adalah keunggulan utama arsitektur kami:
+* **Hybrid Storage Architecture:** Data status pelacakan krusial dikelola secara *on-chain* untuk menjamin keamanan, sedangkan data spesifikasi fisik kendaraan (Model, Tahun, Warna) dikelola secara *off-chain* menggabungkan berkas `vehicles.json` dan browser `localStorage` demi menghemat pengeluaran *gas fee*.
+* **Role-Based Access Control (RBAC):** Fungsi sensitif kontrak pintar dilindungi oleh modifier keamanan `hanyaPabrik` dan `hanyaVendorTerverifikasi` untuk mencegah penulisan data oleh akun ilegal.
+* **Cryptographic Lifecycle Log:** Visualisasi pelacakan kronologis real-time berbiaya gas nol (*zero gas cost*) menggunakan fungsi bertipe `view` (`verifyUnit`).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+Sistem ini dibangun dengan mengintegrasikan ekosistem Web3 dan kerangka kerja web premium berikut:
+
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+* [![Solidity][Solidity.js]][Solidity-url]
+* [![Tailwind][Tailwind.com]][Tailwind-url]
+* [![Ethers][Ethers.js]][Ethers-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+Untuk menjalankan kloning prototipe aplikasi terdesentralisasi ini di lingkungan komputer lokal Anda, ikuti prosedur teknis di bawah ini.
+
+### Prerequisites
+
+Daftar perangkat lunak dan komponen environment awal yang harus Anda persiapkan:
+* **Node.js** (Versi 18 atau yang lebih baru)
+* **NPM** (Pustaka package manager bawaan Node.js)
+* **MetaMask Wallet Extension** terpasang pada browser Anda.
+* Akun MetaMask harus terhubung ke jaringan **Ethereum Sepolia Testnet** dan memiliki saldo uji Sepolia ETH.
+
+### Installation
+
+1. Kloning repositori kode sumber AutoChain Logistics
+   ```sh
+   git clone [https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain.git](https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain.git)
