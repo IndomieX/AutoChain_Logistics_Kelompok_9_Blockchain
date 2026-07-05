@@ -1,17 +1,31 @@
-<h3 align="center">AutoChain Logistics</h3>
+  <h3 align="center">AutoChain Logistics</h3>
+
+
 
   <p align="center">
-    Implementasi Blockchain untuk Meningkatkan Transparansi pada Industri Logistik Mobil[cite: 1]
+
+    Implementasi Blockchain untuk Meningkatkan Transparansi pada Industri Logistik Mobil
+
     <br />
-    <a href="[https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain](https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain)"><strong>Explore the docs »</strong></a>
+
+    <a href="https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain"><strong>Explore the docs »</strong></a>
+
     <br />
+
     <br />
-    <a href="[https://auto-chain-logistics-kelompok-9-blo.vercel.app](https://auto-chain-logistics-kelompok-9-blo.vercel.app)">View Demo</a>
+
+    <a href="https://auto-chain-logistics-kelompok-9-blo.vercel.app">View Demo</a>
+
     &middot;
-    <a href="[https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain/issues/new?labels=bug](https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain/issues/new?labels=bug)">Report Bug</a>
+
+    <a href="https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain/issues/new?labels=bug">Report Bug</a>
+
     &middot;
-    <a href="[https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain/issues/new?labels=enhancement](https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain/issues/new?labels=enhancement)">Request Feature</a>
+
+    <a href="https://github.com/IndomieX/AutoChain_Logistics_Kelompok_9_Blockchain/issues/new?labels=enhancement">Request Feature</a>
+
   </p>
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
